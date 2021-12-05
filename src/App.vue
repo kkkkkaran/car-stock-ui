@@ -1,18 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <html class="h-full bg-gray-50">
+  <body class="h-full">
+  <Login v-if='!authenticated'></Login>
+  </body>
+  </html>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import Login from '@/components/Login'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Login
+  },
+  data() {
+    return {
+        authenticated:false
+    }
   }
 }
 </script>
+
 
 <style>
 #app {
