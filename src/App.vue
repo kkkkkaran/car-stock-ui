@@ -2,7 +2,7 @@
   <html class="h-full bg-gray-50">
   <body class="h-full">
   <Login v-if='!authenticated'></Login>
-  <CarList></CarList>
+  <CarList v-if='authenticated'></CarList>
   </body>
   </html>
 </template>
