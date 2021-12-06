@@ -2,6 +2,7 @@
   <html class="h-full bg-gray-50">
   <body class="h-full">
   <Login v-if='!authenticated'></Login>
+  <CarList></CarList>
   </body>
   </html>
 </template>
@@ -9,11 +10,13 @@
 <script>
 
 import Login from '@/components/Login'
+import CarList from '@/components/CarList'
 
 export default {
   name: 'App',
   components: {
-    Login
+    Login,
+    CarList
   },
   data() {
     return {
